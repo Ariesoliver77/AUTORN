@@ -1,12 +1,12 @@
 const axios = require('axios');
 module.exports.config = {
-  name: 'ai',
+  name: 'artorias',
   version: '1.0.0',
   role: 0,
-  hasPrefix: false,
+  hasPrefix: true,
   aliases: ['gpt', 'openai'],
-  description: "An AI command powered by GPT-4",
-  usage: "Ai [promot]",
+  description: "An Artorias command powered by GPT-4",
+  usage: "Artorias [promot]",
   credits: 'Developer',
   cooldown: 3,
 };
@@ -17,7 +17,7 @@ module.exports.run = async function({
 }) {
   const input = args.join(' ');
   if (!input) {
-    api.sendMessage(`Please provide a question or statement after 'ai'. For example: 'ai What is the capital of France?'`, event.threadID, event.messageID);
+    api.sendMessage(`Please provide a question or statement after 'artorias'. For example: 'Artoriae What is the capital of France?'`, event.threadID, event.messageID);
     return;
   }
   api.sendMessage(`🔍 "${input}"`, event.threadID, event.messageID);
